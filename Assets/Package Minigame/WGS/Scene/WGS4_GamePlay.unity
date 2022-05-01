@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -841,7 +841,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 433185145}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -853,7 +853,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1958678278}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -865,7 +865,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 699370278}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -877,7 +877,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 510055537}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -889,7 +889,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 991029426}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -901,7 +901,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 816288752}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -913,7 +913,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 127369046}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -1526,7 +1526,6 @@ GameObject:
   - component: {fileID: 127369049}
   - component: {fileID: 127369048}
   - component: {fileID: 127369047}
-  - component: {fileID: 127369046}
   - component: {fileID: 127369045}
   m_Layer: 0
   m_Name: Player 4
@@ -1544,32 +1543,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 127369044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57e152d4af7a4987a1196e1086bf22c, type: 3}
+  m_Script: {fileID: 11500000, guid: bc1da9a65d2d247a4a466674f6836c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeCharacter: NPC
   Character: {fileID: 127369044}
-  JumpHeight: 4
---- !u!114 &127369046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127369044}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aadb69e41a288254c8189b9b9e9efba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 127369044}
   TargetAnimator: {fileID: 1388094623}
-  AnimIdle: IDLE
-  AnimRun: RUN
-  MaxPlayerSpeed: 7.9
-  PlayerSpeed: 0
-  NPCCanMove: 1
+  MaxSpeed: 10
+  CharSpeed: 0
+  CanMove: 1
   IsItemSpeedActive: 0
+  JumpForce: 6
 --- !u!114 &127369047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3713,7 +3696,6 @@ GameObject:
   - component: {fileID: 433185148}
   - component: {fileID: 433185147}
   - component: {fileID: 433185146}
-  - component: {fileID: 433185145}
   - component: {fileID: 433185144}
   m_Layer: 0
   m_Name: Player 2
@@ -3731,32 +3713,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 433185143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57e152d4af7a4987a1196e1086bf22c, type: 3}
+  m_Script: {fileID: 11500000, guid: bc1da9a65d2d247a4a466674f6836c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeCharacter: NPC
   Character: {fileID: 433185143}
-  JumpHeight: 4
---- !u!114 &433185145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433185143}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aadb69e41a288254c8189b9b9e9efba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 433185143}
   TargetAnimator: {fileID: 72868190}
-  AnimIdle: IDLE
-  AnimRun: RUN
-  MaxPlayerSpeed: 8.5
-  PlayerSpeed: 0
-  NPCCanMove: 1
+  MaxSpeed: 10
+  CharSpeed: 0
+  CanMove: 1
   IsItemSpeedActive: 0
+  JumpForce: 6
 --- !u!114 &433185146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4170,26 +4136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPosition: 0
---- !u!114 &510055537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697376126289168}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aadb69e41a288254c8189b9b9e9efba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1697376126289168}
-  TargetAnimator: {fileID: 1913408113}
-  AnimIdle: IDLE
-  AnimRun: RUN
-  MaxPlayerSpeed: 8.5
-  PlayerSpeed: 0
-  NPCCanMove: 1
-  IsItemSpeedActive: 0
 --- !u!54 &510055538
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4220,21 +4166,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1.02, z: 0}
---- !u!114 &510055540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697376126289168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57e152d4af7a4987a1196e1086bf22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeCharacter: NPC
-  Character: {fileID: 1697376126289168}
-  JumpHeight: 4
 --- !u!1 &510512203
 GameObject:
   m_ObjectHideFlags: 0
@@ -4849,26 +4780,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPosition: 0
---- !u!114 &699370278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697376616201760}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aadb69e41a288254c8189b9b9e9efba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1697376616201760}
-  TargetAnimator: {fileID: 213006509}
-  AnimIdle: IDLE
-  AnimRun: RUN
-  MaxPlayerSpeed: 7.9
-  PlayerSpeed: 0
-  NPCCanMove: 1
-  IsItemSpeedActive: 0
 --- !u!54 &699370279
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4899,21 +4810,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1.02, z: 0}
---- !u!114 &699370281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697376616201760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57e152d4af7a4987a1196e1086bf22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeCharacter: NPC
-  Character: {fileID: 1697376616201760}
-  JumpHeight: 4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,10 +5187,10 @@ GameObject:
   - component: {fileID: 816288755}
   - component: {fileID: 816288754}
   - component: {fileID: 816288753}
-  - component: {fileID: 816288752}
   - component: {fileID: 816288757}
   - component: {fileID: 816288758}
   - component: {fileID: 816288759}
+  - component: {fileID: 816288760}
   m_Layer: 0
   m_Name: -----PLAYER-----
   m_TagString: Player
@@ -5302,25 +5198,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &816288752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816288751}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 256f9d7b8b0f30740bae9aaf48f4da47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 816288751}
-  TargetAnimator: {fileID: 464478441}
-  PlayerSpeed: 0
-  maxSpeed: 10
-  jumpForce: 6
-  btnRun: {fileID: 996109967}
-  btnJump: {fileID: 914239355}
 --- !u!136 &816288753
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5444,6 +5321,26 @@ MonoBehaviour:
   playerPositionTxt: {fileID: 290520342}
   playerWinTxt: {fileID: 280323424}
   playerPointsTxt: {fileID: 1903857891}
+--- !u!114 &816288760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816288751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821869e1441da4ae3b10ac4059ebc3a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character: {fileID: 816288751}
+  TargetAnimator: {fileID: 464478441}
+  MaxSpeed: 10
+  CharSpeed: 0
+  CanMove: 1
+  IsItemSpeedActive: 0
+  JumpForce: 6
+  IsControlBtnActive: 0
 --- !u!1 &828776523
 GameObject:
   m_ObjectHideFlags: 0
@@ -6277,26 +6174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPosition: 0
---- !u!114 &991029426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697377101659833}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aadb69e41a288254c8189b9b9e9efba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1697377101659833}
-  TargetAnimator: {fileID: 1900881192}
-  AnimIdle: IDLE
-  AnimRun: RUN
-  MaxPlayerSpeed: 9
-  PlayerSpeed: 0
-  NPCCanMove: 1
-  IsItemSpeedActive: 0
 --- !u!54 &991029427
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6327,21 +6204,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1.02, z: 0}
---- !u!114 &991029429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697377101659833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57e152d4af7a4987a1196e1086bf22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeCharacter: NPC
-  Character: {fileID: 1697377101659833}
-  JumpHeight: 4
 --- !u!1 &996109965
 GameObject:
   m_ObjectHideFlags: 0
@@ -11813,26 +11675,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPosition: 0
---- !u!114 &1958678278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697376786828659}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aadb69e41a288254c8189b9b9e9efba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1697376786828659}
-  TargetAnimator: {fileID: 1514029805}
-  AnimIdle: IDLE
-  AnimRun: RUN
-  MaxPlayerSpeed: 8.8
-  PlayerSpeed: 0
-  NPCCanMove: 1
-  IsItemSpeedActive: 0
 --- !u!54 &1958678279
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11863,21 +11705,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1.02, z: 0}
---- !u!114 &1958678281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697376786828659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57e152d4af7a4987a1196e1086bf22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeCharacter: NPC
-  Character: {fileID: 1697376786828659}
-  JumpHeight: 4
 --- !u!1 &1975518908
 GameObject:
   m_ObjectHideFlags: 0
@@ -12669,8 +12496,7 @@ GameObject:
   - component: {fileID: 510055538}
   - component: {fileID: 510055539}
   - component: {fileID: 510055536}
-  - component: {fileID: 510055537}
-  - component: {fileID: 510055540}
+  - component: {fileID: 1697376126289169}
   m_Layer: 0
   m_Name: Player 6
   m_TagString: NPC
@@ -12678,6 +12504,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1697376126289169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697376126289168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1da9a65d2d247a4a466674f6836c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character: {fileID: 1697376126289168}
+  TargetAnimator: {fileID: 1913408113}
+  MaxSpeed: 10
+  CharSpeed: 0
+  CanMove: 1
+  IsItemSpeedActive: 0
+  JumpForce: 6
 --- !u!1 &1697376616201760
 GameObject:
   m_ObjectHideFlags: 0
@@ -12690,8 +12535,7 @@ GameObject:
   - component: {fileID: 699370279}
   - component: {fileID: 699370280}
   - component: {fileID: 699370277}
-  - component: {fileID: 699370278}
-  - component: {fileID: 699370281}
+  - component: {fileID: 1697376616201761}
   m_Layer: 0
   m_Name: Player 5
   m_TagString: NPC
@@ -12699,6 +12543,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1697376616201761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697376616201760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1da9a65d2d247a4a466674f6836c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character: {fileID: 1697376616201760}
+  TargetAnimator: {fileID: 213006509}
+  MaxSpeed: 10
+  CharSpeed: 0
+  CanMove: 1
+  IsItemSpeedActive: 0
+  JumpForce: 6
 --- !u!1 &1697376786828659
 GameObject:
   m_ObjectHideFlags: 0
@@ -12711,8 +12574,7 @@ GameObject:
   - component: {fileID: 1958678279}
   - component: {fileID: 1958678280}
   - component: {fileID: 1958678277}
-  - component: {fileID: 1958678278}
-  - component: {fileID: 1958678281}
+  - component: {fileID: 1697376786828660}
   m_Layer: 0
   m_Name: Player 3
   m_TagString: NPC
@@ -12720,6 +12582,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1697376786828660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697376786828659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1da9a65d2d247a4a466674f6836c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character: {fileID: 1697376786828659}
+  TargetAnimator: {fileID: 1514029805}
+  MaxSpeed: 10
+  CharSpeed: 0
+  CanMove: 1
+  IsItemSpeedActive: 0
+  JumpForce: 6
 --- !u!1 &1697377101659833
 GameObject:
   m_ObjectHideFlags: 0
@@ -12732,8 +12613,7 @@ GameObject:
   - component: {fileID: 991029427}
   - component: {fileID: 991029428}
   - component: {fileID: 991029425}
-  - component: {fileID: 991029426}
-  - component: {fileID: 991029429}
+  - component: {fileID: 1697377101659834}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: NPC
@@ -12741,6 +12621,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1697377101659834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697377101659833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1da9a65d2d247a4a466674f6836c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character: {fileID: 1697377101659833}
+  TargetAnimator: {fileID: 1900881192}
+  MaxSpeed: 10
+  CharSpeed: 0
+  CanMove: 1
+  IsItemSpeedActive: 0
+  JumpForce: 6
 --- !u!4 &4475379752318847
 Transform:
   m_ObjectHideFlags: 0

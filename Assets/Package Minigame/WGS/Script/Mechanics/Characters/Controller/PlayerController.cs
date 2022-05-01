@@ -11,6 +11,7 @@ namespace RunMinigames.Mechanics.Characters.Controller
         private void Start()
         {
             view = GetComponent<PhotonView>();
+            Rb = GetComponent<Rigidbody>();
         }
 
         public override void Jump()

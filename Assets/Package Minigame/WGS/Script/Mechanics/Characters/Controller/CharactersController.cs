@@ -4,21 +4,24 @@ namespace RunMinigames.Mechanics.Characters.Controller
 {
     public abstract class CharactersController : MonoBehaviour
     {
-        [Header("Character")]
-        protected Rigidbody Rb;
+        [Header("Base Character")]
         public GameObject Character;
         public Animator TargetAnimator;
+        protected Rigidbody Rb;
+
 
         [Header("Character Speed")]
-        public float CharSpeed = 0f;
         public float MaxSpeed = 10f;
+
+        [Range(0.0F, 10f)] public float CharSpeed = 0f;
         public bool CanMove = true;
         public bool IsItemSpeedActive = false;
 
 
         [Header("Character Jump")]
+        [Space(10f)]
+        public float JumpForce = 6f;
         protected bool IsGrounded;
-        public float JumpForce;
 
         public virtual void Movement()
         {
