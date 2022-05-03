@@ -6,7 +6,7 @@ namespace RunMinigames.Mechanics.Characters.Controller
     public abstract class CharactersController : MonoBehaviour, ICharacterItem
     {
         [Header("Base Character")]
-        public GameObject Character;
+        // public GameObject gameObject;
         public Animator TargetAnimator;
         protected Rigidbody Rb;
 
@@ -51,7 +51,7 @@ namespace RunMinigames.Mechanics.Characters.Controller
                 charSpeed = maxSpeed;
             }
 
-            Character.transform.position += new Vector3(0, 0, charSpeed * Time.deltaTime);
+            gameObject.transform.position += new Vector3(0, 0, charSpeed * Time.deltaTime);
         }
 
 

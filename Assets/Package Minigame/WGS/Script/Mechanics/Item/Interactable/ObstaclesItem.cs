@@ -19,14 +19,6 @@ namespace RunMinigames.Mechanics.Interactable
             base.Awake();
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out ICharacterItem character))
-            {
-                StartCoroutine(OnCollideBehaviour(character));
-            }
-        }
-
         public override IEnumerator OnCollideBehaviour(ICharacterItem character)
         {
             character.IsItemSpeedActive = false;

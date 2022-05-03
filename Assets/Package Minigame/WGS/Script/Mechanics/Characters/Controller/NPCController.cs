@@ -10,7 +10,7 @@ namespace RunMinigames.Mechanics.Characters.Controller
 
         private void Start()
         {
-            Collider = Character.GetComponent<CapsuleCollider>();
+            Collider = gameObject.GetComponent<CapsuleCollider>();
             FeetDistance = Collider.bounds.extents.y;
 
             Rb = GetComponent<Rigidbody>();
@@ -35,7 +35,7 @@ namespace RunMinigames.Mechanics.Characters.Controller
         {
             Ray ray = new Ray();
             RaycastHit hit;
-            ray.origin = Character.transform.position + (transform.forward * 1);
+            ray.origin = gameObject.transform.position + (transform.forward * 1);
             ray.direction = Vector3.forward;
 
             IsJump = Physics.Raycast(ray, out hit, 2f);
@@ -48,7 +48,7 @@ namespace RunMinigames.Mechanics.Characters.Controller
                 charSpeed = maxSpeed;
             }
 
-            Character.transform.position += new Vector3(0, 0, charSpeed * Time.deltaTime);
+            gameObject.transform.position += new Vector3(0, 0, charSpeed * Time.deltaTime);
         }
 
         public override void Running(float runSpeed = 1) => base.Running(runSpeed);

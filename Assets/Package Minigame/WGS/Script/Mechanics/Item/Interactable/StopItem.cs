@@ -6,20 +6,8 @@ namespace RunMinigames.Mechanics.Interactable
 {
     public class StopItem : InteractableItem
     {
-        private new void Awake()
-        {
-            base.Awake();
-            mesh = GetComponent<MeshRenderer>();
-            sphereCollider = GetComponent<SphereCollider>();
-        }
-
+        private new void Awake() => base.Awake();
         private void Update() => Destroy(gameObject, 60f);
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out ICharacterItem character))
-                StartCoroutine(OnCollideBehaviour(character));
-        }
 
         public override IEnumerator OnCollideBehaviour(ICharacterItem character)
         {

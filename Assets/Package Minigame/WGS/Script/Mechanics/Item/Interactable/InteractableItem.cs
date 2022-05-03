@@ -1,12 +1,7 @@
 using UnityEngine;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using RunMinigames.Manager.Characters;
 using RunMinigames.Interface.Characters;
 
-
-//TODO: CREATE CHARACTERS CONTROLLER
 namespace RunMinigames.Mechanics.Interactable
 {
     public abstract class InteractableItem : MonoBehaviour
@@ -14,7 +9,6 @@ namespace RunMinigames.Mechanics.Interactable
         [SerializeField] protected float SpeedCharacter;
         [SerializeField] protected float LongTimeBehaviour;
         [SerializeField] float speedItemMove;
-
 
         protected MeshRenderer mesh;
         protected SphereCollider sphereCollider;
@@ -24,12 +18,24 @@ namespace RunMinigames.Mechanics.Interactable
 
         protected void Awake()
         {
-            moveItem = gameObject.AddComponent<MoveItem>();
-            moveItem.isObstacles = isObstacles;
-            moveItem.speed = speedItemMove;
+            if (!isObstacles)
+            {
+                moveItem = gameObject.AddComponent<MoveItem>();
+                moveItem.speed = speedItemMove;
+            }
+
+            mesh = GetComponent<MeshRenderer>();
+            sphereCollider = GetComponent<SphereCollider>();
         }
 
-        //! ganti pake interface
+        protected void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent(out ICharacterItem character))
+            {
+                StartCoroutine(OnCollideBehaviour(character));
+            }
+        }
+
         public abstract IEnumerator OnCollideBehaviour(ICharacterItem character);
     }
 }

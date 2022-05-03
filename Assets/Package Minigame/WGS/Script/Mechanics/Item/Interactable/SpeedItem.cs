@@ -6,23 +6,10 @@ namespace RunMinigames.Mechanics.Interactable
 {
     public class SpeedItem : InteractableItem
     {
-
         float PrevPlayerSpeed;
         float PrevNPCSpeed;
 
-        private new void Awake()
-        {
-            base.Awake();
-            mesh = GetComponent<MeshRenderer>();
-            sphereCollider = GetComponent<SphereCollider>();
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out ICharacterItem character))
-                StartCoroutine(OnCollideBehaviour(character));
-        }
-
+        private new void Awake() => base.Awake();
         private void Update() => Destroy(gameObject, 60f);
 
         public override IEnumerator OnCollideBehaviour(ICharacterItem character)
