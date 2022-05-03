@@ -10,8 +10,9 @@ namespace RunMinigames.Mechanics.Interactable
         float PrevPlayerSpeed;
         float PrevNPCSpeed;
 
-        private void Awake()
+        private new void Awake()
         {
+            base.Awake();
             mesh = GetComponent<MeshRenderer>();
             sphereCollider = GetComponent<SphereCollider>();
         }

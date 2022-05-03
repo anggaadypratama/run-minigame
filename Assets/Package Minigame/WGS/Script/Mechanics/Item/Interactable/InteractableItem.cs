@@ -13,9 +13,21 @@ namespace RunMinigames.Mechanics.Interactable
     {
         [SerializeField] protected float SpeedCharacter;
         [SerializeField] protected float LongTimeBehaviour;
+        [SerializeField] float speedItemMove;
+
 
         protected MeshRenderer mesh;
         protected SphereCollider sphereCollider;
+        protected bool isObstacles;
+
+        MoveItem moveItem;
+
+        protected void Awake()
+        {
+            moveItem = gameObject.AddComponent<MoveItem>();
+            moveItem.isObstacles = isObstacles;
+            moveItem.speed = speedItemMove;
+        }
 
         //! ganti pake interface
         public abstract IEnumerator OnCollideBehaviour(ICharacterItem character);

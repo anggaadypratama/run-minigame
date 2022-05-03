@@ -6,8 +6,9 @@ namespace RunMinigames.Mechanics.Interactable
 {
     public class StopItem : InteractableItem
     {
-        private void Awake()
+        private new void Awake()
         {
+            base.Awake();
             mesh = GetComponent<MeshRenderer>();
             sphereCollider = GetComponent<SphereCollider>();
         }
