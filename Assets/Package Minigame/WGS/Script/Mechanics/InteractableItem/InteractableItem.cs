@@ -14,6 +14,9 @@ namespace RunMinigames.Mechanics.Interactable
         [SerializeField] protected float SpeedCharacter;
         [SerializeField] protected float LongTimeBehaviour;
 
+        protected MeshRenderer mesh;
+        protected SphereCollider sphereCollider;
+
         //! ganti pake interface
         public abstract IEnumerator OnCollideBehaviour(ICharacterItem character);
     }

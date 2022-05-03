@@ -2,13 +2,11 @@ using System.Collections;
 using UnityEngine;
 using RunMinigames.Interface.Characters;
 using Photon.Pun;
-using RunMinigames.Manager.Characters;
 
 namespace RunMinigames.Mechanics.Interactable
 {
     public class ObstaclesItem : InteractableItem
     {
-
         CheckGameType type;
         PhotonView view;
 
@@ -23,12 +21,6 @@ namespace RunMinigames.Mechanics.Interactable
             if (other.TryGetComponent(out ICharacterItem character))
             {
                 StartCoroutine(OnCollideBehaviour(character));
-
-                // if (character is Player player)
-                // {
-                //     view = player?.GetComponent<PhotonView>();
-                //     Zetcode_CameraFollowPlayerFixed.cameraFollow.isShake = (type.IsMultiplayer && view.IsMine) || type.IsSingleplayer;
-                // }
             }
         }
 

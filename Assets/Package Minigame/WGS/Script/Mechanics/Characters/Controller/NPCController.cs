@@ -8,7 +8,6 @@ namespace RunMinigames.Mechanics.Characters.Controller
         float FeetDistance;
         bool IsJump;
 
-
         private void Start()
         {
             Collider = Character.GetComponent<CapsuleCollider>();
