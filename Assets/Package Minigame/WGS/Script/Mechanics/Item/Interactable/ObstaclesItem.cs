@@ -1,14 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using RunMinigames.Interface.Characters;
-// using Photon.Pun;
+using Photon.Pun;
 
 namespace RunMinigames.Mechanics.Interactable
 {
     public class ObstaclesItem : InteractableItem
     {
         CheckGameType type;
-        // PhotonView view;
+        PhotonView view;
 
         private new void Awake()
         {

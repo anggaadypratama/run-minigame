@@ -7,10 +7,7 @@ public class MoveItem : MonoBehaviour
     Rigidbody rb;
     [SerializeField] bool isRight, isLeft;
 
-    private void Awake()
-    {
-        rb = gameObject?.GetComponent<Rigidbody>();
-    }
+    private void Awake() => rb = gameObject?.GetComponent<Rigidbody>();
 
     private void Start()
     {
@@ -21,23 +18,21 @@ public class MoveItem : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         if (isRight && !isLeft)
         {
             rb.velocity = transform.right * speed;
             isLeft = false;
         }
+
         if (isLeft && !isRight)
         {
             rb.velocity = transform.forward * speed;
             isRight = false;
         }
-
     }
 
     IEnumerator Move()
     {
-
         yield return new WaitForSeconds(2);
         isLeft = true;
         isRight = false;
