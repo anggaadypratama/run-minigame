@@ -6,9 +6,6 @@ namespace RunMinigames.Mechanics.Interactable
 {
     public class StopItem : InteractableItem
     {
-        private new void Awake() => base.Awake();
-        private void Update() => Destroy(gameObject, 60f);
-
         public override IEnumerator OnCollideBehaviour(ICharacterItem character)
         {
             mesh.enabled = false;

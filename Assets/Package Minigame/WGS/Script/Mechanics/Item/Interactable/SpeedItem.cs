@@ -9,9 +9,6 @@ namespace RunMinigames.Mechanics.Interactable
         float PrevPlayerSpeed;
         float PrevNPCSpeed;
 
-        private new void Awake() => base.Awake();
-        private void Update() => Destroy(gameObject, 60f);
-
         public override IEnumerator OnCollideBehaviour(ICharacterItem character)
         {
             mesh.enabled = false;

@@ -18,8 +18,9 @@ public class MultiplayerFinishManager : MonoBehaviour
 
     PhotonView pv;
 
-    private void Awake() =>  pv = GetComponent<PhotonView>();
-    private void Update() {
+    private void Awake() => pv = GetComponent<PhotonView>();
+    private void Update()
+    {
         pv.RPC("SendCount", RpcTarget.AllBuffered, playerFinishList.Count);
     }
     public int TotalPlayersDisconnect { get; set; }
@@ -44,7 +45,8 @@ public class MultiplayerFinishManager : MonoBehaviour
             // LeaderboardUI.SetActive(!isPlayerCrossFinish);
             finishUI.SetActive(isPlayerCrossFinish);
 
-            for(int i = 0; i < LeaderboardUI.transform.childCount; i++){
+            for (int i = 0; i < LeaderboardUI.transform.childCount; i++)
+            {
                 // Debug.Log($"child number: {i}");
                 GameObject child = LeaderboardUI.transform.GetChild(i).gameObject;
                 child.gameObject.SetActive(!isPlayerCrossFinish);

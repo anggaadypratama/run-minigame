@@ -31,6 +31,7 @@ public class Zetcode_CameraFollowPlayerFixed : MonoBehaviour
 
     void LateUpdate()
     {
+        Debug.Log(cameraFollow);
         newtrans.x = TargetPlayer.transform.position.x + offset.x;
         newtrans.z = TargetPlayer.transform.position.z + offset.z;
         transform.position = newtrans;

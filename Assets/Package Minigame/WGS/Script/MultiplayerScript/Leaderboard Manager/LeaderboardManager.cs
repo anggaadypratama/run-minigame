@@ -51,11 +51,13 @@ public class LeaderboardManager : MonoBehaviourPunCallbacks
     [Header("Animation Podium")]
     public List<GameObject> UIPositionObj;
 
-    public void ShowPlayerRank(int playerFinish) 
+    public void ShowPlayerRank(int playerFinish)
     {
         // Debug.Log(UIPositionObj[1].activeInHierarchy == false);
-        for (int i = 0; i < playerFinish; i++){
-            if(UIPositionObj[i].activeInHierarchy == false){
+        for (int i = 0; i < playerFinish; i++)
+        {
+            if (UIPositionObj[i].activeInHierarchy == false)
+            {
                 UIPositionObj[i].SetActive(true);
                 UIPositionObj[i].GetComponent<Animation>().Play("showRank");
             }
@@ -173,12 +175,9 @@ public class LeaderboardManager : MonoBehaviourPunCallbacks
 
     void LateUpdate()
     {
-
         ItemFocusToPlayer();
         RemovePlayerOnDisconnect();
         UpdateLeaderboard();
-
-
     }
 
 

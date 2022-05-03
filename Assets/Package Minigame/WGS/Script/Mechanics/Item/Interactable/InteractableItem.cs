@@ -28,12 +28,15 @@ namespace RunMinigames.Mechanics.Interactable
             sphereCollider = GetComponent<SphereCollider>();
         }
 
+        protected void Update()
+        {
+            if (!isObstacles) Destroy(gameObject, 60f);
+        }
+
         protected void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out ICharacterItem character))
-            {
                 StartCoroutine(OnCollideBehaviour(character));
-            }
         }
 
         public abstract IEnumerator OnCollideBehaviour(ICharacterItem character);
