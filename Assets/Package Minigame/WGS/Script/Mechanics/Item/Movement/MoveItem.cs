@@ -3,14 +3,11 @@ using UnityEngine;
 
 public class MoveItem : MonoBehaviour
 {
-    [SerializeField] float speed = 1.5f;
+    [SerializeField] public float speed = 1.5f;
     Rigidbody rb;
     [SerializeField] bool isRight, isLeft;
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    private void Awake() => rb = gameObject?.GetComponent<Rigidbody>();
 
     private void Start()
     {
@@ -26,6 +23,7 @@ public class MoveItem : MonoBehaviour
             rb.velocity = transform.right * speed;
             isLeft = false;
         }
+
         if (isLeft && !isRight)
         {
             rb.velocity = transform.forward * speed;

@@ -10,18 +10,13 @@ namespace RunMinigames.Mechanics.Interactable
         CheckGameType type;
         PhotonView view;
 
-        private void Awake()
+        private new void Awake()
         {
+            isObstacles = true;
             GameObject gameManager = GameObject.Find("GameManager");
             type = gameManager.GetComponent<CheckGameType>();
-        }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out ICharacterItem character))
-            {
-                StartCoroutine(OnCollideBehaviour(character));
-            }
+            base.Awake();
         }
 
         public override IEnumerator OnCollideBehaviour(ICharacterItem character)
