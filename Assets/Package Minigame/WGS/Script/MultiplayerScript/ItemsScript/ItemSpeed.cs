@@ -61,8 +61,7 @@ public class ItemSpeed : MonoBehaviour
 
             yield return new WaitForSeconds(SpeedTime);
 
-            PlayerMovement.PlayerSpeed = PrevPlayerSpeed;
-            PlayerMovement.IsItemSpeedActive = false;
+
 
             itemCountdown.time = 0f;
             itemCountdownGO.SetActive(false);
@@ -71,7 +70,6 @@ public class ItemSpeed : MonoBehaviour
         }
 
         PlayerMovement.IsItemSpeedActive = false;
-        PlayerMovement.PlayerSpeed = 0;
         yield return new WaitForSeconds(0);
     }
 

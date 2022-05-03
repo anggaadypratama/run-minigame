@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7930775266224442973}
   - component: {fileID: 7930775266224442914}
   - component: {fileID: 7930775266224442969}
-  - component: {fileID: 9159058743996770923}
+  - component: {fileID: 2309503392196449078}
   m_Layer: 0
   m_Name: Singleplayer_Item Speed
   m_TagString: Untagged
@@ -129,7 +129,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9159058743996770923
+--- !u!114 &2309503392196449078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,8 +138,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7930775266224442915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30c2e3595fb914767b134e6f6fb7840a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ad6c09523f69494b85acf35171165d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedCharacter: 4
-  SpeedTime: 3
+  TimeBehaviour: 3

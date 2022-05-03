@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace RunMinigames.Mechanics.Characters.Controller
 {
     public class NPCController : CharactersController
@@ -30,7 +29,7 @@ namespace RunMinigames.Mechanics.Characters.Controller
             Vector3 fwd = transform.TransformDirection(Vector3.down);
             IsGrounded = Physics.Raycast(transform.position, fwd, FeetDistance + .1f);
 
-            if (IsJump && CanMove) Rb.velocity = new Vector3(0, JumpForce, 0);
+            if (IsJump && canMove) Rb.velocity = new Vector3(0, JumpForce, 0);
         }
 
         public override void Jump()
@@ -45,20 +44,14 @@ namespace RunMinigames.Mechanics.Characters.Controller
 
         public override void Movement()
         {
-            if (CharSpeed >= MaxSpeed && !IsItemSpeedActive)
+            if (charSpeed >= maxSpeed && !isItemSpeedActive)
             {
-                CharSpeed = MaxSpeed;
-
-                Debug.Log(CharSpeed);
+                charSpeed = maxSpeed;
             }
 
-            Character.transform.position += new Vector3(0, 0, CharSpeed * Time.deltaTime);
+            Character.transform.position += new Vector3(0, 0, charSpeed * Time.deltaTime);
         }
 
         public override void Running(float runSpeed = 1) => base.Running(runSpeed);
-
-
-
-
     }
 }

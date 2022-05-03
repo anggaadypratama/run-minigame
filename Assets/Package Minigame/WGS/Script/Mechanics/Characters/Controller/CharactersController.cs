@@ -1,8 +1,9 @@
 using UnityEngine;
+using RunMinigames.Interface.Characters;
 
 namespace RunMinigames.Mechanics.Characters.Controller
 {
-    public abstract class CharactersController : MonoBehaviour
+    public abstract class CharactersController : MonoBehaviour, ICharacterItem
     {
         [Header("Base Character")]
         public GameObject Character;
@@ -10,12 +11,17 @@ namespace RunMinigames.Mechanics.Characters.Controller
         protected Rigidbody Rb;
 
 
-        [Header("Character Speed")]
-        public float MaxSpeed = 10f;
+        [Header("Character Run")]
+        [Range(0f, 10f)] public float maxSpeed = 10f;
+        public float charSpeed;
+        public bool canMove = true;
+        public bool isItemSpeedActive = false;
 
-        [Range(0.0F, 10f)] public float CharSpeed = 0f;
-        public bool CanMove = true;
-        public bool IsItemSpeedActive = false;
+
+        public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
+        public float CharSpeed { get => charSpeed; set => charSpeed = value; }
+        public bool CanMove { get => canMove; set => canMove = value; }
+        public bool IsItemSpeedActive { get => isItemSpeedActive; set => isItemSpeedActive = value; }
 
 
         [Header("Character Jump")]
@@ -23,14 +29,15 @@ namespace RunMinigames.Mechanics.Characters.Controller
         public float JumpForce = 6f;
         protected bool IsGrounded;
 
+
         public virtual void Movement()
         {
-            if (CharSpeed >= 0 && !IsItemSpeedActive)
+            if (charSpeed >= 0 && !isItemSpeedActive)
             {
 
-                CharSpeed -= 0.01f;
+                charSpeed -= 0.01f;
             }
-            else if (CharSpeed >= 0 && IsItemSpeedActive)
+            else if (charSpeed >= 0 && isItemSpeedActive)
             {
                 TargetAnimator.SetBool("isRunning", true);
             }
@@ -39,29 +46,29 @@ namespace RunMinigames.Mechanics.Characters.Controller
                 TargetAnimator.SetBool("isRunning", false);
             }
 
-            if (CharSpeed >= MaxSpeed)
+            if (charSpeed >= maxSpeed)
             {
-                CharSpeed = MaxSpeed;
+                charSpeed = maxSpeed;
             }
 
-            Character.transform.position += new Vector3(0, 0, CharSpeed * Time.deltaTime);
+            Character.transform.position += new Vector3(0, 0, charSpeed * Time.deltaTime);
         }
 
 
         public virtual void Running(float runSpeed = 1f)
         {
-            if (CanMove)
+            if (canMove)
             {
                 TargetAnimator.SetBool("isRunning", true);
 
-                if (!IsItemSpeedActive)
+                if (!isItemSpeedActive)
                 {
-                    CharSpeed += runSpeed;
+                    charSpeed += runSpeed;
                 }
             }
             else
             {
-                CharSpeed = 0;
+                charSpeed = 0;
                 TargetAnimator.SetBool("isRunning", false);
             }
         }

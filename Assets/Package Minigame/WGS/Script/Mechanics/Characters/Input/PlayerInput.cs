@@ -55,6 +55,7 @@ namespace RunMinigames.Mechanics.Characters.Input
 
         private void OnEnable()
         {
+            //Button Control
             if (CheckPlatform.isIos || CheckPlatform.isAndroid && IsControlBtnActive)
             {
                 btnJump.onClick.AddListener(Jump);
@@ -75,7 +76,6 @@ namespace RunMinigames.Mechanics.Characters.Input
                 if (UnityEngine.Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     Running();
-
                 }
 
                 if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
@@ -94,6 +94,7 @@ namespace RunMinigames.Mechanics.Characters.Input
                 CheckPlatform.isWeb
             )
             {
+                //Touch Control
                 if (!IsControlBtnActive)
                 {
 
@@ -103,7 +104,7 @@ namespace RunMinigames.Mechanics.Characters.Input
                     {
                         if (UnityEngine.Input.GetTouch(i).position.x > screenWidth / 2)
                         {
-                            if (CanMove && !IsItemSpeedActive)
+                            if (canMove && !isItemSpeedActive)
                             {
                                 Running(.07f);
                             }
