@@ -15,9 +15,8 @@ namespace RunMinigames.Mechanics.Characters.Controller
 
         public override void Jump()
         {
-            if (IsGrounded && CanMove)
+            if (IsGrounded && canMove)
             {
-                Debug.Log(Vector3.up * JumpForce);
                 Rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
                 IsGrounded = false;
                 TargetAnimator.SetTrigger("Jump");
@@ -26,7 +25,6 @@ namespace RunMinigames.Mechanics.Characters.Controller
 
         private void OnCollisionEnter(Collision collider)
         {
-
             IsGrounded = collider.gameObject.tag == "Ground";
             TargetAnimator.SetBool("isGrounded", IsGrounded);
         }
