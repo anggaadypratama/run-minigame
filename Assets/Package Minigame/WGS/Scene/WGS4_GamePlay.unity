@@ -1346,7 +1346,7 @@ GameObject:
   - component: {fileID: 118212978}
   - component: {fileID: 118212979}
   m_Layer: 0
-  m_Name: ----- ISOMETRIC CAMERA
+  m_Name: ISOMETRIC CAMERA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2985,7 +2985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 351735411}
   m_Layer: 0
-  m_Name: ----- CHECKPOINTS
+  m_Name: CHECKPOINT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6039,7 +6039,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3dba2694cbb6204fa65d61eaf991e8e, type: 3}
   m_Name: 
@@ -7259,7 +7259,7 @@ GameObject:
   - component: {fileID: 1144604494}
   - component: {fileID: 1144604493}
   m_Layer: 0
-  m_Name: ----- ITEM SPAWNER
+  m_Name: ITEM SPAWNER
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -10463,7 +10463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1705305241}
   m_Layer: 0
-  m_Name: ----- OBSTACLE
+  m_Name: OBSTACLES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11864,7 +11864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1993861381}
   m_Layer: 0
-  m_Name: ------ENVIRONMENT-----
+  m_Name: ENVIRONMENT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12440,7 +12440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100163236}
   m_Layer: 0
-  m_Name: ----- CHARACTER
+  m_Name: CHARACTER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

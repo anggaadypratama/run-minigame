@@ -9,7 +9,7 @@ namespace RunMinigames.Mechanics.Characters.Input
     public class PlayerInput : PlayerController
     {
         [Header("Mobile")]
-        [SerializeField] private bool IsControlBtnActive = false;
+        [SerializeField] bool IsControlBtnActive = false;
         float screenWidth;
         Button btnJump;
         Button btnRun;
@@ -24,10 +24,13 @@ namespace RunMinigames.Mechanics.Characters.Input
 
         private void Start()
         {
+            Debug.Log((CheckPlatform.isAndroid || CheckPlatform.isIos) && IsControlBtnActive);
             btnJump.gameObject.SetActive((CheckPlatform.isAndroid || CheckPlatform.isIos) && IsControlBtnActive);
             btnRun.gameObject.SetActive((CheckPlatform.isAndroid || CheckPlatform.isIos) && IsControlBtnActive);
 
             screenWidth = Screen.width;
+
+            gameObject.AddComponent<RunMinigames.Mechanics.Characters.Info.PlayerInfo>();
         }
 
         GameObject FindInActiveObjectByName(string name)
