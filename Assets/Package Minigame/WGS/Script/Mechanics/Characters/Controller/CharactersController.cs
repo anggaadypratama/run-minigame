@@ -13,7 +13,7 @@ namespace RunMinigames.Mechanics.Characters.Controller
 
         [Header("Character Run")]
         [Range(0f, 10f)] public float maxSpeed = 10f;
-        public float charSpeed;
+        [Range(0f, 10f)] public float charSpeed;
         public bool canMove = true;
         public bool isItemSpeedActive = false;
 

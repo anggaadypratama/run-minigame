@@ -13,6 +13,8 @@ namespace RunMinigames.Mechanics.Characters.Controller
             Collider = gameObject.GetComponent<CapsuleCollider>();
             FeetDistance = Collider.bounds.extents.y;
 
+            gameObject.AddComponent<RunMinigames.Mechanics.Characters.Info.NPCInfo>();
+
             Rb = GetComponent<Rigidbody>();
         }
 

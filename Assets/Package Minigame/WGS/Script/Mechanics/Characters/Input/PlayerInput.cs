@@ -24,7 +24,6 @@ namespace RunMinigames.Mechanics.Characters.Input
 
         private void Start()
         {
-            Debug.Log((CheckPlatform.isAndroid || CheckPlatform.isIos) && IsControlBtnActive);
             btnJump.gameObject.SetActive((CheckPlatform.isAndroid || CheckPlatform.isIos) && IsControlBtnActive);
             btnRun.gameObject.SetActive((CheckPlatform.isAndroid || CheckPlatform.isIos) && IsControlBtnActive);
 
